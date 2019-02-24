@@ -1,0 +1,17 @@
+{
+  "name": "redesign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "lite": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ajaegbu Shedrack",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-social": "^5.1.1",
+    "lite-server": "^2.4.0"
+  }
+}

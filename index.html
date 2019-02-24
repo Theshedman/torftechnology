@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
+    <!-- Bootsrap CDN -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+          crossorigin="anonymous">
+    <!-- CSS Link -->
+    <link rel="stylesheet"
+          href="css/style.css">
+    <link rel="shortcut icon"
+          href="images/logo.png"
+          type="image/x-icon">
+
+    <title>TORF TECHNOLOGIES &#8211; Software Solutions Provider in Lagos Nigeria</title>
+  </head>
+
+  <body>
+
+    <!-- Navigation Menu -->
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
+      <div class="container">
+        <button class="navbar-toggler"
+                data-toggle="collapse"
+                data-target="#Navbar"
+                type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand bg-primary"
+           href="#">
+          <img src="images/logo.png"
+               alt=""
+               height="30"
+               width="41">
+        </a>
+        <div class="collapse navbar-collapse"
+             id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"><a class="nav-link"
+                 href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link"
+                 href="about.html"><i class="fa fa-info fa-lg"></i> About</a></li>
+            <li class="nav-item"><a class="nav-link"
+                 href="services/services.html"><i class="fas fa-th fa-lg"></i> Services</a></li>
+            <li class="nav-item"><a class="nav-link"
+                 href="blog/blog.html"><i class="fab fa-blogger fa-lg"></i> Blog</a></li>
+            <li class="nav-item"><a class="nav-link"
+                 href="contact.html"><i class="fa fa-address-card fa-lg"></i> Contact</a></li>
+          </ul>
+          <span class="navbar-text">
+            <a href="javascript.void(0)"
+               id="login"
+               data-target="#loginModal">
+              <span class="fas fa-sign-in-alt"> Login</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div id="loginModal"
+         class="modal fade"
+         role="dialog">
+      <div class="modal-dialog modal-lg"
+           role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button type="button"
+                    class="close"
+                    data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-row">
+                <div class="form-group col-sm-4">
+                  <label class="sr-only"
+                         for="exampleInputEmail3">Email address</label>
+                  <input type="email"
+                         class="form-control form-control-sm mr-1"
+                         id="exampleInputEmail3"
+                         placeholder="Enter email">
+                </div>
+                <div class="form-group col-sm-4">
+                  <label class="sr-only"
+                         for="exampleInputPassword3">Password</label>
+                  <input type="password"
+                         class="form-control form-control-sm mr-1"
+                         id="exampleInputPassword3"
+                         placeholder="Password">
+                </div>
+                <div class="col-sm-auto">
+                  <div class="form-check">
+                    <input class="form-check-input"
+                           type="checkbox">
+                    <label class="form-check-label"> Remember me
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <button type="button"
+                        class="btn btn-secondary btn-sm ml-auto"
+                        data-dismiss="modal">Cancel</button>
+                <button type="submit"
+                        class="btn btn-primary btn-sm ml-1">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentTable"
+         class="modal fade row row-content justify-content-center"
+         tabindex="-1"
+         role="dialog"
+         aria-labelledby="appointmentTableLabel"
+         aria-hidden="true">
+      <div class="modal-dialog col-12 col-sm-8"
+           role="content">
+        <div class="card">
+          <div class="modal-header">
+            <h3 class="modal-title"
+                id="appointmentTableLabel">Book Appointment</h3>
+            <button type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card-body">
+              <dl class="row">
+                <dt class="col-12 col-sm-4">Number of Guests</dt>
+                <dd class="col-12 col-sm-8 mb-4">
+                  <form>
+                    <div class="form-group form-row">
+                      <div class="form-check form-check-inline">
+                        <input type="radio"
+                               name="radio-btn"
+                               id="radio-btn1"
+                               class="form-check-input">
+                        <lable class="form-check-label"
+                               for="radio-btn"> 1 </lable>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio"
+                               name="radio-btn2"
+                               id="radiobtn"
+                               class="form-check-input">
+                        <lable class="form-check-label"
+                               for="radiobtn"> 2 </lable>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio"
+                               name="radio-btn"
+                               id="radio-btn3"
+                               class="form-check-input">
+                        <lable class="form-check-label"
+                               for="radio-btn"> 3 </lable>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio"
+                               name="radio-btn4"
+                               id="radio-btn"
+                               class="form-check-input">
+                        <lable class="form-check-label"
+                               for="radio-btn"> 4 </lable>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio"
+                               name="radio-btn"
+                               id="radio-btn5"
+                               class="form-check-input">
+                        <lable class="form-check-label"
+                               for="radio-btn"> 5 </lable>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input type="radio"
+                               name="radio-btn"
+                               id="radio-btn6"
+                               class="form-check-input">
+                        <lable class="form-check-label"
+                               for="radio-btn"> 6 </lable>
+                      </div>
+                    </div>
+                  </form>
+                </dd>
+
+                <dt class="col-12 col-sm-4 mt-2">Section</dt>
+                <dd class="col-12 col-sm-8 align-self-center">
+                  <div class="btn-group btn-group-toggle"
+                       data-toggle="buttons">
+                    <label class="btn btn-info active">
+                      <input type="radio"
+                             name="options"
+                             id="option1"
+                             autocomplete="off"
+                             checked="checked"> Consulting
+                    </label>
+                    <label class="btn btn-dark">
+                      <input type="radio"
+                             name="options"
+                             id="option2"
+                             autocomplete="off"
+                             checked="checked"> Hiring
+                    </label>
+                  </div>
+                </dd>
+
+                <dt class="col-12 col-sm-3 mt-4">Date and Time</dt>
+                <dd class="col-12 col-sm-8 mt-4 offset-1">
+                  <form>
+                    <div class="form-row">
+                      <input class="form-control col-12 col-sm-5 mr-3"
+                             type="text"
+                             name="date"
+                             id="date"
+                             placeholder="Date">
+                      <input class="form-control col-12 col-sm-5"
+                             type="text"
+                             name="time"
+                             id="time"
+                             placeholder="Time">
+                    </div>
+                  </form>
+                </dd>
+              </dl>
+
+              <div class="modal-footer justify-content-start p-0">
+                <div class="offset-4">
+                  <button class="btn btn-secondary"
+                          type="button"
+                          data-dismiss="modal"
+                          aria-label="close">Cancel</button>
+                </div>
+                <div class="">
+                  <button class="btn btn-primary"
+                          type="button">Appointment</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="jumbotron">
+      <div class="container">
+        <div class="row row-header">
+          <div class="col-12 col-sm-6">
+            <h1>Torf Technologies</h1>
+            <p>We offer the best services in technology to take your business to the next level.
+              Our consultants are seasoned professionals who don't see you as ordinary clients, but permanent partners!</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md align-self-center">
+            <img class="img-fluid"
+                 src="images/logo.png">
+          </div>
+          <div class="col-12 col-sm align-self-center">
+            <a href=""
+               class="btn nav-link btn-block btn-tick-dark"
+               role="button"
+               id="bookAppointment"
+               data-target="#appointmentTable"><strong>Book Appointment</strong></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Carousel -->
+    <div class="row row-content p-0 d-none d-sm-block">
+      <div class="col">
+        <div id="mycarousel"
+             class="carousel slide"
+             data-ride="carousel">
+          <div class="carousel-inner"
+               role="listbox">
+            <div class="carousel-item first active ">
+              <div class="carousel-caption">
+                <h2>Software Asset Management
+                  <span class="badge badge-danger">HOT</span>
+                  <span class="badge badge-pill badge-secondary">$499.99</span>
+                </h2>
+                <p class="d-none d-sm-block">In today’s fast-paced, ever-changing business environment, organisations
+                  are faced with a dilemma: how to embrace new technologies, manage their complexities effectively
+                  and get the best out of them in order to gain significant competitive advantage while reducing
+                  cost. Simply put, SAM is a service for utilizing, managing, controlling and safeguarding your
+                  organisation’s software assets.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item second">
+              <div class="carousel-caption">
+                <h2>Custom Application Development
+                  <span class="badge badge-danger">New</span>
+                </h2>
+                <p class="d-none d-sm-block">Our team at TORF Technologies consists of seasoned programmers who have
+                  developed enviable competencies in the use of several programming languages and utilities over
+                  several decades.
+
+                  And, with the experience from working at OEMs such as Microsoft and Oracle, we are in a great
+                  position to come up with solutions that deliver the best that enterprise applications can offer.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item third">
+              <div class="carousel-caption">
+                <h2>Collaboration Solutions</h2>
+                <h4>...meet and exceed your needs.</h4>
+                <p class="d-none d-sm-block card-text">Collaboration is the rave in the business world today, and for
+                  good reason. If you are looking to succeed in today’s fast-paced, global business environment, you
+                  need to have your employees and relevant stakeholders collaborating seamlessly and flexibly. </p>
+              </div>
+            </div>
+            <ol class="carousel-indicators">
+              <li data-target="#mycarousel"
+                  data-slide-to="0"
+                  class="active"></li>
+              <li data-target="#mycarousel"
+                  data-slide-to="1"></li>
+              <li data-target="#mycarousel"
+                  data-slide-to="2"></li>
+            </ol>
+            <a href="#mycarousel"
+               class="carousel-control-prev"
+               role="button"
+               data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a href="#mycarousel"
+               class="carousel-control-next"
+               role="button"
+               data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
+            <button class="btn bg-primary text-white btn-sm"
+                    id="carouselButton">
+              <span class="fa fa-pause"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <div class="container-fluid z-depth-2">
+      <div class="products row d-flex justify-content-around">
+        <div class="card z-depth-5 mt-4"
+             style="width: 18rem; border-radius: 24px">
+          <img class="card-img-top"
+               style="border-top-left-radius: 24px; border-top-right-radius: 24px;"
+               src="images/Collaboration-hacks-from-real-life-teams-FI-440x268-300x183.png"
+               alt="collaboration hacks">
+          <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Business Process Automation</h5>
+            <p class="card-text text-justify">At TORF Technologies, we believe that BPA is more than process
+              automation; it is an
+              expert balance of
+              people, process and technology designed to exceed your business goals. </p>
+            <a href="services/business-process.automation.html"
+               class="btn  bg-primary text-white col-12 round">Find out more</a>
+          </div>
+        </div>
+        <div class="card z-depth-5 mt-4"
+             style="width: 18rem; border-radius: 24px">
+          <img class="card-img-top"
+               style="border-top-left-radius: 24px; border-top-right-radius: 24px;"
+               src="images/advance-infrastructure.jpg"
+               alt="Custom application development">
+          <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Custom Application Development</h5>
+            <p class="card-text text-justify">Our team at TORF Technologies consists of seasoned programmers who have
+              developed
+              enviable
+              competencies
+              in
+              the use of several programming languages and utilities over several decades.
+            </p>
+            <a href="services/custom-application-development.html"
+               class="btn  bg-primary text-white col-12 round">Find out more</a>
+          </div>
+        </div>
+        <div class="card z-depth-5 mt-4"
+             style="width: 18rem; border-radius: 24px">
+          <img class="card-img-top"
+               style="border-top-left-radius: 24px; border-top-right-radius: 24px;"
+               src="images/collaboration2.jpg"
+               alt="Collaboration solutions">
+          <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Collaboration Solutions</h5>
+            <p class="card-text text-justify">We at TORF Technologies consult extensively with you to understand the
+              current,
+              expected and possible
+              workflows in your organization, and then develop or deliver the right collaboration solution(s) for you
+              accordingly.</p>
+            <a href="services/collaboration-solutions.html"
+               class="btn  bg-primary text-white col-12 round">Find out more</a>
+          </div>
+        </div>
+        <div class="card z-depth-5 mt-4"
+             style="width: 18rem; border-radius: 24px">
+          <img class="card-img-top"
+               style="border-top-left-radius: 24px; border-top-right-radius: 24px;"
+               src="images/services/website-design.jpg"
+               alt="website design">
+          <div class="card-body">
+            <h5 class="card-title text-center font-weight-bold">Web Development</h5>
+            <p class="card-text text-justify">We take our time to understand your business, brand, industry and
+              customers, and then develop sites and site content which deliver converting information and experience.</p>
+            <a href="services/website-design-and-development.html"
+               class="btn  bg-primary text-white col-12 round">Find out more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog News -->
+      <div class="row mb-5">
+        <!-- Blog header -->
+        <div class="col-12 text-center p-5">
+          <h3>Blog News</h3>
+          <h5 class="text-secondary">Top stories from our blog posts</h5>
+        </div>
+
+        <!-- Microsoft News -->
+        <div class="col-12 col-md-6">
+          <div class="microsoft-news">
+            <h3 class="text-center"><a href="blog/microsoft-mobile-strategy.html">Microsoft Next Mobile Strategy is to
+                make IOS and Android better</a></h3>
+            <img class="img-size"
+                 src="images/Mellicia-Marx-FI-1-300x183.png"
+                 alt="">
+            <p class="text-justify text-secondary">Microsoft hasn’t had a great time with mobile. While we can debate
+              whether or not Windows Phone is
+              finally dead, Microsoft is certainly ready to move on. After missing the mobile boat, Microsoft is
+              now
+              trying to sneak onto iOS and Android devices like a stealthy submarine. We’ve seen the company focus
+              on
+              iOS and Android apps before, but at the Build event in Seattle this week the message is clear:
+              Microsoft
+              is finally being realistic. Microsoft’s new push is to convince Windows users it can help them resume
+              activities and apps even if they’re using an iPhone or Android device. The idea is simple: it doesn’t
+              matter what devices you’re using in the Microsoft world as long as one of them is Windows. Microsoft has
+              a number of different tricks to try and make this a reality, and it truly believes it can help make iOS
+              and Android devices better as a result.</p>
+          </div>
+        </div>
+
+        <!-- Firefox News -->
+        <div class="col-12 col-md-6">
+          <div class="firefox-news">
+            <h3 class="text-center"><a href="blog/post-password-future.html">Firefox Moves Browsers into Post-Password
+                future with Webauthn Tech</a></h3>
+            <img class="img-size"
+                 src="images/infotech.jpg"
+                 alt="">
+            <p class="text-justify  text-secondary">Firefox 60 supports technology called Web Authentication, or
+              WebAuthn for short, that can be used to
+              grant you access to websites with a physical authentication device like a YubiKey dongle, biometric
+              identity proof using an Android phone’s fingerprint reader or the iPhone’s Face ID, and some other
+              alternatives to passwords. Passwords are a particular problem on the web. Fake websites can coax you to
+              type in credentials that then can be used to steal money from your bank account or snoop your email — a
+              problem called phishing. Even if you pick hard-to-guess passwords, never reuse them on multiple sites and
+              always remember them, passwords still aren’t that strong a foundation for security these days. We’re
+              still a long way away from a post-password future, but WebAuthn is an important step, if nothing else, in
+              making sites more secure.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Partners -->
+    <div class="row partners m-0 p-0 pb-3 z-depth-2">
+      <div class="col-12">
+        <h3 class="border-b">Partners</h3>
+      </div>
+      <div class="col-12 d-flex align-items-center justify-content-around flex-wrap">
+        <img src="images/partners/microsoft.png"
+             alt="">
+        <img src="images/partners/hp.png"
+             alt="">
+        <img src="images/partners/dell.png"
+             alt="">
+        <img src="images/partners/cisco.png"
+             alt="">
+        <img src="images/partners/MTN.jpg"
+             alt="">
+        <img src="images/partners/Vodafone.jpg"
+             alt="">
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-footer text-white">
+      <div class="row">
+        <!-- Links -->
+        <div class="col-12 col-md-8">
+          <div class="links d-flex flex-column flex-md-row justify-content-between">
+            <div class="d-flex justify-content-around w-100">
+              <div>
+                <h3><a href="index.html">Home</a></h3>
+                <div class="d-flex justify-content-between align-content-center">
+                  <ul class="rm-vertical">
+                    <li>&copy; 2019 &#8211; TORF Technologies</li>
+                  </ul>
+                  <ul class="d-flex flex-column align-items-center justify-content-around w-50 icon-link"
+                      style="color: white; background: #1663c7">
+                    <li><a href="www.facebook.com"><i class="fab fa-facebook fa-lg"></i></a></li>
+                    <li><a href="www.twitter.com"><i class="fab fa-twitter fa-lg"></i></a></li>
+                    <li><a href="www.youtube.com"><i class="fab fa-youtube fa-lg"></i></a></li>
+                    <li><a href="www.linkedin.com"><i class="fab fa-linkedin fa-lg"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="pl-4">
+                <h3><a href="services/services.html">Services</a></h3>
+                <ul>
+                  <li><a href="services/software-asset-management.html">Software Asset management</a></li>
+                  <li><a href="services/microsoft-licensing-advisory.html">Microsoft Licensing Advsory</a></li>
+                  <li><a href="services/documents-management-system.html">Documents Management System</a></li>
+                  <li><a href="services/deployment-consulting.html">Deployment Consulting</a></li>
+                  <li><a href="services/custom-application-development.html">Custom Application Development</a></li>
+                  <li><a href="services/collaboration-solutions.html">Collaboration Solutions</a></li>
+                  <li><a href="services/torf-learning-application.html">Torf Learning Application</a></li>
+                  <li><a href="services/website-design-and-development.html">Web Design & Development</a></li>
+                  <li><a href="services/business-process.automation.html">Business Process Automation</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex justify-content-around flex-md-column">
+              <div class="w-100 pl-2">
+                <h3><a href="blog/blog.html">Blog</a></h3>
+                <ul class="">
+                  <li><a href="blog/microsoft-mobile-strategy.html">Microsoft Strategy</a></li>
+                  <li><a href="blog/post-password-future.html">Firefox Post-password Future</a></li>
+                </ul>
+              </div>
+              <div class="mt-3">
+                <h3><a href="about.html">About</a></h3>
+                <ul class="">
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Newsletter Sign-up -->
+        <div class="col-12 col-md-4 text-center">
+          <div class="newsletter d-flex flex-column align-items-stretch">
+            <h3 class="">Newsletter Sign-up</h3>
+            <p>Stay updated with the latest news and special offers sent directly to your inbox</p>
+            <form action="">
+              <input type="email"
+                     placeholder="someone@example.com"
+                     class="form-control form-control-lg round">
+              <input type="submit"
+                     value="Sign-up for news and updates"
+                     class="form-control form-control-lg round bg-primary mt-3 text-white border border-primary z-depth-3">
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Bootstrap JavaScript Files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript File -->
+    <script src="js/app.js"></script>
+  </body>
+
+</html>
